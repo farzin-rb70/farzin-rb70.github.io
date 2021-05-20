@@ -1,11 +1,28 @@
-- name: HTML5/CSS3
-  percentage: 90
+- name: embedded C/C++ on AVR/STM32
+  percentage: 95
   color: danger
 
-- name: Go
+- name: embedded C/C++ on ESP8266/ESP32
   percentage: 80
-  color:
+  color: danger
 
-- name: Python
+- name: embedded C/C++ on MSP430
+  percentage: 50
+  color: danger
+
+- name: freeRTOS / multithread programming
   percentage: 70
+  color: danger
+
+- name: object oriented /design patterns
+  percentage: 60
   color: secondary
+
+- name: python/C# (only for serial or socket control)
+  percentage: 20
+  color: secondary
+
+- name: HTML/CSS/JS(for make static page on ESP Webserver)
+  percentage: 20
+  color: info
+
