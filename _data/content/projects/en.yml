@@ -1,0 +1,103 @@
+# you can move this content to front matter of [language]/tabs/projects.md
+###########################################################
+#                Projects Page Data
+###########################################################
+page_data:
+  main:
+    header: "Projects"
+    info: "Electronic and embedded projects"
+    text_color: "white"
+    # if you don't want to use background image, comment it. back_color will be activated.
+    img: ":projects-heading.jpg"
+    back_color: "lightblue"
+
+  category:
+    - title: "Linux"
+      type: id_linux
+      color: "gray"
+    - title: "embedded"
+      type: id_embedded
+      color: "#62b462"
+    - title: "Software"
+      type: id_software
+      color: "#2FD0ED"
+
+  list:
+    # example
+    - type: id_embedded
+      project_name: "controller of PLA injectin machine"
+      project_excerpt: "Parto pajooh Ayandeh Comp."
+      img: ":injection.jpeg"
+      img_title: "injection"
+      date: "2021-03-13"
+      post: |
+        # controller of PLA injectin machine
+        In this project we use STM32F103 microcontroller for reading the termocuple ,read 
+        isolated  array input, controle the linear motor with realTime FB, read ruller 
+        (ADC 12 bit) , lcd HMI with serial interface , and use esp8266 for log and remote controll.
+        termocuple have a isolated interface designing and we used fast signal isolator, and only
+        one termocuple ic!!!
+
+        ![Image](:injection.jpeg)
+
+
+    # picture
+    - type: id_embedded
+      project_name: "digital torniquet"
+      project_excerpt: "Parto pajooh Ayandeh Comp."
+      img: ":tor1.jpg"
+      img_title: "digital tor"
+      date: "2021-04-23"
+      post: |
+        # digital torniquet
+        A tourniquet is a constricting or compressing device used to control venous and arterial
+        circulation to an extremity for a period of time. Pressure is applied circumferentially to
+        the skin and underlying tissues a limb; this pressure is transferred to the vessel wall
+        causing a temporary occlusion.
+
+        ![Image](:tor1.jpg)
+        
+        There are a number of commercially available tourniquets available for pre-hospital and
+        hospital patients of exsanguinating extremity trauma. While there are potential risks
+        involved in the utilization of tourniquets, expeditious and clinically appropriate
+        application in the presence of potentially life threatening hemorrhage is in keeping not
+        only with the standards of medical professionals, but accordingly so with the best interests
+        of the patient.
+        ![Image](:tor2.jpg)
+        
+        
+        
+    # picture
+    - type: id_embedded
+      project_name: "Dp-lamp Dust & pollution purifier Lamp"
+      project_excerpt: "NOVE(Sharif Uni.)"
+      img: ":dplamp1.jpg"
+      img_title: "dplamp"
+      date: "2021-04-23"
+      post: |
+        # [link](https://dp-lamp-dust-pollution.business.site/)
+        
+        
+        
+       # picture
+    - type: id_embedded
+      project_name: "autoClave type-N"
+      project_excerpt: "Parto pajooh Ayandeh Comp."
+      img: ":autoclave.jpg"
+      img_title: "autoClave"
+      date: "2021-04-23"
+      post:
+      
+      
+        # picture
+    - type: id_embedded
+      project_name: "Phiver defrust and noFrust refregitor"
+      project_excerpt: "Parto pajooh Ayandeh Comp."
+      img: ":refBox.jpeg"
+      img_title: "refBox"
+      date: "2021-04-23"
+      post:
+      
+      
+
+
