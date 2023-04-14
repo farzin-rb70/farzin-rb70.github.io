@@ -40,9 +40,6 @@ xmlns:image="https://www.google.com/schemas/sitemap-image/1.1">
     <loc>http://localhost:4000/pe/tabs/links.html</loc>
   </url>
   <url>
-    <loc>http://localhost:4000/tabs/links.html</loc>
-  </url>
-  <url>
     <loc>http://localhost:4000/pe/tabs/projects.html</loc>
   </url>
   <url>

@@ -35,40 +35,86 @@ button_name: "CV Page"
 # to disable this page, simply set published: false or delete this file
 #published: false
 ---
-
-## Hello 
-### i am **Farzin Rezaei**
+#### aboat me:
 I was born in 1991 , I currently live in Tehran. I am a creative and enthusiastic **embedded engineer** with **5 years experience** in the **electronic and IoT industry**. I have experience in designing and production, debugging, researching and development of electronic instrument. I am always looking for a challenging opportunity within the design and production unit.
 
+#### Services:
+
+> - Circuit & PCB design:
+>   - Altium
+>   - KiCad
+>   - Analog Design 
+> - Embedded C/C++:
+>   - Microcontrollers:
+>     - Cortex-M0/3/4/7  (STM32 / iMX.6)
+>     - Xtensa /6V cores (ESP32 / ESP8266)
+>     - AVR / PIC / MSP430 
+>   - Object Oriented
+>   - Design paterns
+>   - middleware (FreeRTOS)
+> - Project manager:
+>   - git
+>   - Jira
+
+#### Experience:
+
+
+> - **Embedded Software Engineer, Ara Electronic Afzar, IRAN**
+> *(2021 — present)*
+>   - Combi Oven Controller
+>   - 1to3Phase inverter for 2hp motors
+>   - side Mirror for Tiba & Kueik
+>   - Coutomer Management Service(POS)
+>   - Industrial Gas Detector
+> - **Embedded Software Engineer, as freelancer, IRAN**
+> *(2021 — present)*
+>   - welding machine board
+>   - solar battery charger
+> - **Embedded Software Engineer, NOVE(Sharif University ,Technology Services Complex), IRAN**
+> *(2021 — 2021)*
+> - Dp-lamp(dust purifier lamp)
+> - general IoT platform (IoTin)
+> - serial datalogger
+> - **Embedded Software Engineer, Parto-Pajooh-Ayandeh, IRAN**
+> *(2018 — 2021)*
+>   - Performing various projects such as: 
+>     - plastic injection machine board
+>     - smart electronic tourniquet
+>     - thermo detector and motor control for refregitor
+>     - use ESP8266 for IoT project with webApp and webserver mode
+>     - remote and receiver board for IRAN KHODRO Pegout-405 company
+>     - glass lifting board for Saipa company.
+> - **Embedded Software Engineer, as a freelasncer, IRAN**
+> *(2016 — 2018)*
+>   - Performing projects like:
+>     - smart greenhouse
+>     - videometric
+>     - some automation system.
+> - **Electronic Engineer, Telsa-co , IRAN** 
+> *(2015 — 2016)*
+>   - Performing various projects such as:
+>     - smart power for IVR system
+>     - motion detector for air conditioner
+>     - usb hub and development boards for thin-client.
+
+
+#### Education:
+> **Student, Tafresh University ,IRAN**
+> (2010 — 2015)
+> **bachelor degree**
 
 
 
 
-#### Student, Tafresh University ,IRAN
-2010 — 2015
-#### bachelor degree
-
-#### Electronic Engineer, Telsa-co , IRAN *2015 — 2016*
-Performing various projects such as smart power for IVR system, motion detector for air conditioner, usb hub and development boards for thin-client.
 
 
 
-#### Embedded Software Engineer, as a freelasncer, IRAN
-2016 — 2018
-Performing projects like smart greenhouse, videometric, some automation system.
-
-#### Embedded Software Engineer, Parto-Pajooh-Ayandeh, IRAN
-2018 — 2021
-Performing various projects such as plastic injection machine board, smart electronic tourniquet, thermo detector and motor control for refregitor, use ESP8266 for IoT project with webApp and webserver mode , remote and receiver board for IRAN KHODRO Pegout-405 company, glass lifting board for Saipa company.
-
-#### Embedded Software Engineer, NOVE(Sharif University ,Technology Services Complex), IRAN
-2021 — 2021
-Dp-lamp(dust purifier lamp) , general IoT platform (IoTin) , serial datalogger
 
 
-#### Embedded Software Engineer, as freelancer, IRAN
-2021 — present
-welding machine board , solar battery charger
+
+
+
+
 
 
 
