@@ -37,10 +37,11 @@ img: ":home-heading.jpg"
 #published: false
 ---
 
-### Hello i am **Farzin Rezaei**
+I'm **Farzin Rezaei**, I was born in 1991, I currently live in Tehran.
+you could call me on: 
+- [+98919696178](tel:+98919696178)
 
-
-I was born in 1991 , I currently live in Tehran. I am a creative and enthusiastic **Electronic Engineer** with over **7 years experience** and a strong technical/coding background that is essential to this role, like:
+I am a creative and enthusiastic **Electronic Engineer** with over **7 years experience** and a strong technical/coding background that is essential to this role, like:
 - Embedded **C/C++** 
 - Embedded Programming (ARM Cortex-M, AVR, ESP32,STM8)
 - middleware **(Free-RTOS)**
