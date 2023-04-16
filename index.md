@@ -36,9 +36,8 @@ img: ":home-heading.jpg"
 # don't forget that this is root index.html. If you disable this, there will be no index.html page to open
 #published: false
 ---
-
-I'm **Farzin Rezaei**, I was born in 1991, I currently live in Tehran.
-you could call me on: 
+### Hello , I'm Farzin Rezaei
+Electronic & Embedded Engineer 
 - [+98919696178](tel:+98919696178)
 
 I am a creative and enthusiastic **Electronic Engineer** with over **7 years experience** and a strong technical/coding background that is essential to this role, like:
