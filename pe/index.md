@@ -4,7 +4,7 @@ layout: home
 lng_pair: id_home
 
 # image for page specific usage
-img: ":home-heading.jpg"
+img: ":top.jpg"
 # publish date (used for seo)
 # if not specified, site.time will be used.
 #date: 2022-03-03 12:32:00 +0000
@@ -37,24 +37,8 @@ img: ":home-heading.jpg"
 #published: false
 ---
 
-{%- comment -%} Please delete below and place your page content here {%- endcomment -%}
+<div dir="rtl">
+<p> سلام من فرزین رضایی مهندس الکترونیک و برنامه نویس سیستم های امبدد هستم.</p>
+<p> در صورتی که نیاز به طراحی برد های الکترونیکی با انالوگ یا دیجیتال با altium یا KiCad - برنامه نویسی میکرو کنترلر های ARM/AVR/PIC/ESP یا مباحث مرتبط با تولید برد های الکترونیکی دارید خوشحال میشم در صورت توان با مجموعه ی شما همراه باشم.</p>
 
-من یک مهندس الکترونیک با ۵ سال سایقه کار در حوزه های خودرو و لوازم خانگی هستم.
-
-به میکرو های:
-- arm:
-  - cortex-M4
-  - cortex-M7
-  - STM32
-  - ESP32
- 
-- avr
-- MSP340
-
-مسلط هستم .
-
-و با نرم افزار های طراحی مدار:
-- altium 
-- kicad
-
-
+رزومه من رو میتونید در بخش **درباره من** ببینید. شماره تماس و راه های ارتباطی هم در همین صفحه وجود داره.

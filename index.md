@@ -4,7 +4,7 @@ layout: home
 lng_pair: id_home
 
 # image for page specific usage
-img: ":home-heading.jpg"
+img: ":top.jpg"
 # publish date (used for seo)
 # if not specified, site.time will be used.
 #date: 2022-03-03 12:32:00 +0000
@@ -36,9 +36,11 @@ img: ":home-heading.jpg"
 # don't forget that this is root index.html. If you disable this, there will be no index.html page to open
 #published: false
 ---
-### Hello , I'm Farzin Rezaei
+### Farzin Rezaei
 Electronic & Embedded Engineer 
-- [+98919696178](tel:+98919696178)
+
+
+
 
 I am a creative and enthusiastic **Electronic Engineer** with over **7 years experience** and a strong technical/coding background that is essential to this role, like:
 - Embedded **C/C++** 
