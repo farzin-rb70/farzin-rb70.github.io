@@ -52,7 +52,11 @@ layout: default
           <img src="{{ prj_img_path }}" alt="{{ prj_img_title }}">
         </div>
         {%- endif %}
+        {%- if lng == "pe" %}
+        <div class="col-md-9 project-header" dir="rtl">
+        {% else -%}
         <div class="col-md-9 project-header">
+        {% endif -%}
           <h1>{{ list.project_name }}</h1><h4>{{ list.project_excerpt }}</h4>
           <div class="meta-container">
             <p class="date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i>&nbsp;{{ list.date | date: out_date_format }}</p>
@@ -67,7 +71,12 @@ layout: default
       </div>
       <div class="row">
         <div class="markdown-style">
-          {{ list.post | markdownify }}
+          {%- if lng == "pe" %}
+          <div dir="rtl">{{ list.post | markdownify }}</div> 
+          {% else -%}
+            {{ list.post | markdownify }}
+          {% endif -%}
+          
           <a href="javascript:void(0);" class="read-more-less">
             <i class="fa fa-angle-double-up fa-fw" aria-hidden="true"></i>{{ site.data.lang[lng].projects.read_less_text }}
           </a>

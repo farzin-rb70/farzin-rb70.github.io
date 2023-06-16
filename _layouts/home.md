@@ -35,7 +35,11 @@ layout: default
     </div>
   </div>
   <div class="home-intro-text markdown-style">
-    {{ content }}
+    {%- if lng == "pe" %}
+          <div dir="rtl">{{ content }}</div> 
+        {% else -%}
+        {{ content }}
+        {% endif -%}
   </div>
 </div>
 
