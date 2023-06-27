@@ -10,7 +10,12 @@ layout: default
 {% endif -%}
 
 <div class="post-list-header"></div>
+
+{%- if lng == "pe" %}
+<div class="post-list-container" dir="rtl">
+{% else -%}
 <div class="post-list-container">
+{% endif -%}
   {% for post in paginator.posts -%}
     {% include post-list/post-thumbnail-data.liquid post = post -%}
     {% include post-list/post-thumbnail-html.html

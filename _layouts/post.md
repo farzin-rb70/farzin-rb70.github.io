@@ -5,9 +5,22 @@
 
 layout: default
 ---
+
+
+
 {%- include multi_lng/get-lng-by-url.liquid -%}
 {%- assign lng = get_lng -%}
+
+{%- if lng == "pe" %}
+<div dir="rtl">
+{% endif -%}
+
 {%- include post_common/post-main.html post = page -%}
+
+{%- if lng == "pe" %}
+</div> 
+{% endif -%}
+
 
 {%-comment-%} Pagination {%-endcomment-%}
 {% if site.posts.size > 1 -%}
@@ -19,9 +32,12 @@ layout: default
   {% endif -%}
 {% endif -%}
 
+
 {% if site.data.conf.posts.comments.engine != empty
   and site.data.conf.posts.comments.engine != nil
   and page.comments_disable != true
 %}
   {% include post/comments.html %}
 {% endif %}
+
+
