@@ -56,7 +56,7 @@ title: رزومه من
     - middleware (FreeRTOS/Thread)
 - برنامه ریزی پروژه:
     - git 
-    - gira
+    - Jira
 
 ***
 

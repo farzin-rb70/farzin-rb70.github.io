@@ -28,8 +28,8 @@
 }
 
 .color-scheme-switch span:before {
-  font-family: "FontAwesome";
-  font-weight: 100;
+  font-family: 'Baloo Bhaijaan 2';
+  font-weight: 200;
   /* moon */
   content: "\f186";
 }
@@ -40,7 +40,7 @@
 
 .color-scheme-switch > input:checked + span:before {
   border-radius: 50%;
-  font-family: "FontAwesome";
+  font-family: 'Baloo Bhaijaan 2';
   /* bulb */
   content: "\f0eb";
   transform: scale(1.2);

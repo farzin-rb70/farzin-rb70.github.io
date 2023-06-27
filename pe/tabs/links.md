@@ -41,8 +41,8 @@ lng_pair: id_links
 ###########################################################
 page_data:
   main:
-    header: "リンク"
-    info: "リンクページの説明はこちら。"
+    header: "لینک ها"
+    info: "سایت های مرتبط با الکترونیک و برنامه نویسی"
 
   # To change order of the Categories, simply change order. (you don't need to change list order.)
   category:
@@ -63,4 +63,14 @@ page_data:
       title: "HexaBits"
       url: "https://hexaBits.ir/"
       info: "سایت مجموعه هگزابیت"
+    
+    - type: id_embedded
+      title: "cube Electronic"
+      url: "https://cubeelectronics.ir/"
+      info: "فناوران تراشه رایان"
+
+    - type: id_embedded
+      title: "Ara Electronic Afzar"
+      url: "https://www.araafzar.com/"
+      info: "‌آرا الکترونیک افزار"
 ---
