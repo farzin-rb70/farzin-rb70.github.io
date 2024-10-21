@@ -1,0 +1,13 @@
+footer_menu__settings:
+  menu__items:
+    - title: 'خانه'
+      url: '/'
+    - title: 'دوره ها'
+      url: '/courses/'
+    - title: 'درباره من'
+      url: '/about/'
+    - title: 'وبلاگ'
+      url: '/blog/'
+
+copyright_text_html: >-
+  <p> 2021 &copy; <a href="/">این سایت </a> نمونه برداری شد از کد متن باز <a href="https://cloudcannon.com/"> CloudCannon</a> است.</p>

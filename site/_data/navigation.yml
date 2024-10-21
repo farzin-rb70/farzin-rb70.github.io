@@ -1,0 +1,14 @@
+logo_image: '/images/logo1.png'
+# You can add own logo. For example '/images/logo.png'.
+
+menu__settings:
+  menu__items:
+    - title: 'خانه'
+      url: '/'
+    - title: 'دوره‌ ها'
+      url: '/courses/'
+    - title: 'وبلاگ'
+      url: '/blog/'
+    - title: 'درباره من'
+      url: '/about/'
+      
