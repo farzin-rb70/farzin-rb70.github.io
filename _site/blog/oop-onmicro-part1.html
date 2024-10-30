@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>برنامه نویسی شی گرا برای میکروکنترلر ها (بخش یکم)</title>
+  <meta name='description' content='سابت شخصی فرزین رضایی'>
+
+  <link rel="canonical" href="http://localhost:4000/blog/oop-onmicro-part1">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="برنامه نویسی شی گرا برای میکروکنترلر ها (بخش یکم) – Farzin.rb70">
+  <meta name="twitter:description" content="چگونه با ++C برای سیستم های امبدد کد نویسی کنیم؟
+">
+  <meta name="twitter:image:src" content="http://localhost:4000/images/post-2.jpg">
+
+  <!-- Facebook OpenGraph -->
+  <meta property="og:title" content="برنامه نویسی شی گرا برای میکروکنترلر ها (بخش یکم) – Farzin.rb70">
+  <meta property="og:description" content="چگونه با ++C برای سیستم های امبدد کد نویسی کنیم؟
+">
+  <meta property="og:image" content="http://localhost:4000/images/post-2.jpg">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+
+  <!-- Ionicons -->
+  <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/main.css">
+</head>
+
+
+<body>
+
+    
+
+    <!-- begin header -->
+<header class="c-header">
+  <div class="container" dir="rtl">
+    <div class="row">
+      <div class="c-header__inner" dir="ltr">
+
+        <div class="logo">
+          <a class="logo__link" href="/">
+          
+            <img class="logo__image" src="/images/logo1.png" alt="Farzin.rb70">
+          
+          </a>
+        </div>
+
+        <nav class="main-nav">
+          <div class="main-nav__box">
+
+            <div class="nav__icon-close">
+              <i class="ion ion-md-close"></i>
+            </div>
+
+            <div class="nav__title">Menu</div>
+
+              <ul class="nav__list list-reset">
+
+              
+                
+                <li class="nav__item">
+                  <a href="/" class="nav__link">خانه</a>
+                </li>
+                
+              
+                
+                <li class="nav__item">
+                  <a href="/courses/" class="nav__link">دوره‌ ها</a>
+                </li>
+                
+              
+                
+                <li class="nav__item">
+                  <a href="/blog/" class="nav__link">وبلاگ</a>
+                </li>
+                
+              
+                
+                <li class="nav__item">
+                  <a href="/about/" class="nav__link">درباره من</a>
+                </li>
+                
+              
+
+            </ul>
+          </div>
+
+          <!--bookshop-live meta(version="3.9.0" baseurl="" title="Hexabits") -->
+<!--bookshop-live name(social-link.jekyll.html) params() context() -->
+
+<div class="social">
+  <ul class="social__list list-reset">
+    
+    <li class="social__item">
+      <a class="social__link" href="https://www.linkedin.com/in/farzin-rb70/" target="_blank" rel="noopener" aria-label="linkedin icon"><i class="ion ion-logo-linkedin"></i></a>
+    </li>
+    
+    <li class="social__item">
+      <a class="social__link" href="https://github.com/farzin-rb70" target="_blank" rel="noopener" aria-label="github icon"><i class="ion ion-logo-github"></i></a>
+    </li>
+    
+    <li class="social__item">
+      <a class="social__link" href="https://www.instagram.com/hexabits_edu/" target="_blank" rel="noopener" aria-label="instagram icon"><i class="ion ion-logo-instagram"></i></a>
+    </li>
+    
+    <li class="social__item">
+      <a class="social__link" href="mailto:farzin.rb70@gmail.com" target="_blank" rel="noopener" aria-label="google icon"><i class="ion ion-logo-google"></i></a>
+    </li>
+    
+  </ul>
+</div>
+
+<!--bookshop-live end-->
+        </nav>
+
+        <div class="nav-button">
+          <i class="nav__icon nav__icon-menu ion ion-md-menu"></i>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</header>
+<!-- end header -->
+
+    <div class="post-top" dir="rtl">
+  <div class="container">
+    <div class="row">
+
+      
+      <div class="col col-6 col-d-12">
+        <div class="post-image">
+          <img loading="lazy" src="/images/post-2.jpg" alt="برنامه نویسی شی گرا برای میکروکنترلر ها (بخش یکم)">
+        </div>
+      </div>
+      
+
+      <div class="col col-6 col-d-12">
+        <div class="post__info">
+
+          
+          <div class="post-tags">
+            
+              <a href="/tag/embeddedsoftware" class="post-tags__tag">EmbeddedSoftware</a>
+            
+              <a href="/tag/cpp" class="post-tags__tag">cpp</a>
+            
+          </div>
+          
+
+
+          <h1 class="post__title">برنامه نویسی شی گرا برای میکروکنترلر ها (بخش یکم)</h1>
+
+          <div class="post__meta">
+            <div class="post__author-image">
+              <img loading="lazy" src="/images/avatarFarzin.jpg" alt="فرزین رضایی">
+            </div>
+
+            <div class="post__meta-bottom">
+              <div class="post__author">فرزین رضایی</div>
+              <time class="post__date" datetime="2024-10-22T08:01:35-04:00">22 Oct 2024</time>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- begin post -->
+<div class="container animate">
+
+  <article class="post">
+
+    <div class="post__content" >
+      <h2 id="چگونه-با-c-برای-سیستم-های-امبدد-کد-نویسی-کنیم">چگونه با ++C برای سیستم های امبدد کد نویسی کنیم؟</h2>
+
+<h3 id="مرحله-اول--چراغ-چشمک-زن">مرحله اول : چراغ چشمک زن</h3>
+
+<blockquote>
+  <p>همیشه برای شروع یک پروژه الکترونیکی پای یک LED چشمک زن در میان است!</p>
+</blockquote>
+
+<p>در برنامه نویسی OOP همیشه دید ما به هر عضو در برنامه به صورت یک شی است. پس ما برای اینکه یک LED چشمک زن درست کنیم اول باید یک قالب برای شی مورد نظر ایجاد کنیم سپس میتوانیم هر تعداد شی که دوست داشتیم با این قالب بسازیم.
+برای نوشتن برنامه Blink Led ما به عناصر مختلفی در زبان ++C  نیاز داریم.</p>
+
+<ol>
+  <li>فایل های include شده</li>
+  <li>کلاس Led</li>
+  <li>سازنده کلاس (constructor) - اعضای کلاس (members)</li>
+  <li>متد های روشن کردن - خاموش کردن و معکوس کردن وضعیت ( toggle) با دسترسی مستقیم به حافظه</li>
+  <li>روتین اصلی (main) و روتین تکرار بی‌نهایت (while)</li>
+</ol>
+
+<p>کد چشمک زن در نهایت به صورت زیر است. اگر این روش نوشتار برای شما هم جذاب به نظر میرسد در ادامه با بخش های مختلف این کد آشنا میشیم.</p>
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;cstdint&gt;</span><span class="cp">
+#include</span> <span class="cpf">"mcal_reg.h"</span><span class="cp">
+</span><span class="k">class</span> <span class="nc">led</span>
+<span class="p">{</span>
+<span class="nl">public:</span>
+    <span class="c1">// Use convenient class-specific typedefs.</span>
+    <span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="kt">uint8_t</span> <span class="n">port_type</span><span class="p">;</span>
+    <span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="kt">uint8_t</span> <span class="n">bval_type</span><span class="p">;</span>
+    <span class="c1">// The led class constructor.</span>
+    <span class="n">led</span><span class="p">(</span><span class="k">const</span> <span class="n">port_type</span> <span class="n">p</span><span class="p">,</span>
+        <span class="k">const</span> <span class="n">bval_type</span> <span class="n">b</span><span class="p">)</span> <span class="o">:</span> <span class="n">port</span><span class="p">(</span><span class="n">p</span><span class="p">),</span>
+                             <span class="n">bval</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1">// Set the port pin value to low.</span>
+        <span class="o">*</span><span class="k">reinterpret_cast</span><span class="o">&lt;</span><span class="k">volatile</span> <span class="n">bval_type</span> <span class="o">*&gt;</span><span class="p">(</span><span class="n">port</span><span class="p">)</span> <span class="o">&amp;=</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="n">bval_type</span><span class="o">&gt;</span><span class="p">(</span><span class="o">~</span><span class="n">bval</span><span class="p">);</span>
+        <span class="c1">// Set the port pin direction to output.</span>
+        <span class="c1">// Note that the address of the port direction</span>
+        <span class="c1">// register is one less than the address</span>
+        <span class="c1">// of the port value register.</span>
+        <span class="k">const</span> <span class="n">port_type</span> <span class="n">pdir</span> <span class="o">=</span> <span class="n">port</span> <span class="o">-</span> <span class="mi">1U</span><span class="p">;</span>
+        <span class="o">*</span><span class="k">reinterpret_cast</span><span class="o">&lt;</span><span class="k">volatile</span> <span class="n">bval_type</span> <span class="o">*&gt;</span><span class="p">(</span><span class="n">pdir</span><span class="p">)</span> <span class="o">|=</span> <span class="n">bval</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kt">void</span> <span class="n">on</span><span class="p">()</span> <span class="k">const</span>
+    <span class="p">{</span>
+        <span class="o">*</span><span class="k">reinterpret_cast</span><span class="o">&lt;</span><span class="k">volatile</span> <span class="n">bval_type</span> <span class="o">*&gt;</span><span class="p">(</span><span class="n">port</span><span class="p">)</span> <span class="o">|=</span> <span class="n">bval</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kt">void</span> <span class="n">off</span><span class="p">()</span> <span class="k">const</span>
+    <span class="p">{</span>
+        <span class="o">*</span><span class="k">reinterpret_cast</span><span class="o">&lt;</span><span class="k">volatile</span> <span class="n">bval_type</span> <span class="o">*&gt;</span><span class="p">(</span><span class="n">port</span><span class="p">)</span> <span class="o">&amp;=</span> <span class="o">~</span><span class="n">bval</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kt">void</span> <span class="n">toggle</span><span class="p">()</span> <span class="k">const</span>
+    <span class="p">{</span>
+        <span class="c1">// Toggle the LED via direct memory access.</span>
+        <span class="o">*</span><span class="k">reinterpret_cast</span><span class="o">&lt;</span><span class="k">volatile</span> <span class="n">bval_type</span> <span class="o">*&gt;</span><span class="p">(</span><span class="n">port</span><span class="p">)</span> <span class="o">^=</span> <span class="n">bval</span><span class="p">;</span>
+    <span class="p">}</span>
+
+<span class="k">private</span><span class="o">:</span>
+
+    <span class="c1">// Private member variables of the class.</span>
+    <span class="k">const</span> <span class="n">port_type</span> <span class="n">port</span><span class="p">;</span>
+    <span class="k">const</span> <span class="n">bval_type</span> <span class="n">bval</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="k">namespace</span>
+
+<span class="p">{</span>
+
+    <span class="c1">// Create led_b5 on portb.5.</span>
+    <span class="k">const</span> <span class="n">led</span> <span class="n">led_b5</span><span class="p">{</span>
+        <span class="n">mcal</span><span class="o">::</span><span class="n">reg</span><span class="o">::</span><span class="n">portb</span><span class="p">,</span>
+        <span class="n">mcal</span><span class="o">::</span><span class="n">reg</span><span class="o">::</span><span class="n">bval5</span><span class="p">};</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+
+<span class="p">{</span>
+    <span class="c1">// Toggle led_b5 in a loop forever.</span>
+    <span class="k">for</span> <span class="p">(;;)</span>
+    <span class="p">{</span>
+        <span class="n">led_b5</span><span class="p">.</span><span class="n">toggle</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>کلاس در ++C شروع برنامه نویسی به روش OOP است و همه‌ی ویژگی های یک شی رو در کنار هم جمع میکند. در مثال Led یک کلاس شامل ویژگی های زیر است:</p>
+<ul>
+  <li>ادرس پورتی (PORT) که LED به آن متصل است.</li>
+  <li>شماره پین در آن پورت که به LED اتصال پیدا کرده
+    <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">const</span> <span class="n">port_type</span> <span class="n">port</span><span class="p">;</span>
+  <span class="k">const</span> <span class="n">bval_type</span> <span class="n">bval</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p>و از یک LED انتظار رفتار هایی داریم که همان متد های ما را شامل میشود. ما انتظار داریم که LED ما:</p>
+<ul>
+  <li>روشن شود(On)</li>
+  <li>خاموش شود(Off)</li>
+  <li>وضعیت خود را تغییر دهد (Toggle)
+    <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="kt">void</span> <span class="n">on</span><span class="p">()</span> <span class="k">const</span>
+  <span class="p">{</span>
+  <span class="p">}</span>
+  <span class="kt">void</span> <span class="n">off</span><span class="p">()</span> <span class="k">const</span>
+  <span class="p">{</span>
+  <span class="p">}</span>
+  <span class="kt">void</span> <span class="n">toggle</span><span class="p">()</span> <span class="k">const</span>
+  <span class="p">{</span>
+  <span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p>سازنده شی (Constructor) از متد هایی است که برای یک کلاس واجب است(البته، اما و اگر هم دارد ولی در ابتدای مسیر فرض کنیم که همیشه باید این متد را تعریف کنیم)  - متد سازنده در زمان ایجاد یک شی فراخوانی میشود. پس میتوانیم از طریق این متد مقادیر ثابت که برای ویژگی های شی نیاز داریم را به عنوان مقادیر ورودی این متد وارد کنیم ( که در مثال ما همان پورت و پین مرتبط با LED است.)</p>
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">led</span><span class="p">(</span><span class="k">const</span> <span class="n">port_type</span> <span class="n">p</span><span class="p">,</span>
+
+        <span class="k">const</span> <span class="n">bval_type</span> <span class="n">b</span><span class="p">)</span> <span class="o">:</span> <span class="n">port</span><span class="p">(</span><span class="n">p</span><span class="p">),</span>
+                             <span class="n">bval</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1">// Set the port pin value to low.</span>
+        <span class="o">*</span><span class="k">reinterpret_cast</span><span class="o">&lt;</span><span class="k">volatile</span> <span class="n">bval_type</span> <span class="o">*&gt;</span><span class="p">(</span><span class="n">port</span><span class="p">)</span> <span class="o">&amp;=</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="n">bval_type</span><span class="o">&gt;</span><span class="p">(</span><span class="o">~</span><span class="n">bval</span><span class="p">);</span>
+        <span class="c1">// Set the port pin direction to output.</span>
+        <span class="c1">// Note that the address of the port direction</span>
+        <span class="c1">// register is one less than the address</span>
+        <span class="c1">// of the port value register.</span>
+        <span class="k">const</span> <span class="n">port_type</span> <span class="n">pdir</span> <span class="o">=</span> <span class="n">port</span> <span class="o">-</span> <span class="mi">1U</span><span class="p">;</span>
+        <span class="o">*</span><span class="k">reinterpret_cast</span><span class="o">&lt;</span><span class="k">volatile</span> <span class="n">bval_type</span> <span class="o">*&gt;</span><span class="p">(</span><span class="n">pdir</span><span class="p">)</span> <span class="o">|=</span> <span class="n">bval</span><span class="p">;</span>
+    <span class="p">}</span>
+</code></pre></div></div>
+
+<p>حال برای مقدار دادن به رجیستر PORT از طریق دسترسی مستقیم به حافظه در ++C  از خط زیر استفاده میشود.</p>
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">*</span><span class="k">reinterpret_cast</span><span class="o">&lt;</span><span class="k">volatile</span> <span class="n">bval_type</span> <span class="o">*&gt;</span><span class="p">(</span><span class="n">port</span><span class="p">)</span> <span class="o">|=</span> <span class="n">bval</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>که قبلا معادل C آن را به شکل زیر مینوشتیم:</p>
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">*</span><span class="p">((</span><span class="k">volatile</span> <span class="n">bval_type</span><span class="o">*</span><span class="p">)</span> <span class="n">port</span><span class="p">)</span> <span class="o">^=</span> <span class="n">bval</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>پس برای متد های روشن/ خاموش/تغییر وضعیت متد ها را به روش زیر مینویسیم:</p>
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="kt">void</span> <span class="nf">on</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="o">*</span><span class="k">reinterpret_cast</span><span class="o">&lt;</span><span class="k">volatile</span> <span class="n">bval_type</span> <span class="o">*&gt;</span><span class="p">(</span><span class="n">port</span><span class="p">)</span> <span class="o">|=</span> <span class="n">bval</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kt">void</span> <span class="nf">off</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="o">*</span><span class="k">reinterpret_cast</span><span class="o">&lt;</span><span class="k">volatile</span> <span class="n">bval_type</span> <span class="o">*&gt;</span><span class="p">(</span><span class="n">port</span><span class="p">)</span> <span class="o">&amp;=</span> <span class="o">~</span><span class="n">bval</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kt">void</span> <span class="n">toggle</span><span class="p">()</span> <span class="k">const</span>
+    <span class="p">{</span>
+        <span class="c1">// Toggle the LED via direct memory access.</span>
+        <span class="o">*</span><span class="k">reinterpret_cast</span><span class="o">&lt;</span><span class="k">volatile</span> <span class="n">bval_type</span> <span class="o">*&gt;</span><span class="p">(</span><span class="n">port</span><span class="p">)</span> <span class="o">^=</span> <span class="n">bval</span><span class="p">;</span>
+    <span class="p">}</span>
+</code></pre></div></div>
+
+<p>حالا باید یک برنامه ++C را با گذاشتن بقیه موارد مورد نیاز کامل کنیم:</p>
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;cstdint&gt;</span><span class="cp">
+#include</span> <span class="cpf">"mcal_reg.h"</span><span class="cp">
+</span><span class="k">class</span> <span class="nc">led</span>
+<span class="p">{</span>
+<span class="nl">public:</span>
+    <span class="c1">// Use convenient class-specific typedefs.</span>
+    <span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="kt">uint8_t</span> <span class="n">port_type</span><span class="p">;</span>
+    <span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="kt">uint8_t</span> <span class="n">bval_type</span><span class="p">;</span>
+    <span class="c1">// The led class constructor.</span>
+    <span class="n">led</span><span class="p">(</span><span class="k">const</span> <span class="n">port_type</span> <span class="n">p</span><span class="p">,</span>
+        <span class="k">const</span> <span class="n">bval_type</span> <span class="n">b</span><span class="p">)</span> <span class="o">:</span> <span class="n">port</span><span class="p">(</span><span class="n">p</span><span class="p">),</span>
+                             <span class="n">bval</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1">// Set the port pin value to low.</span>
+        <span class="o">*</span><span class="k">reinterpret_cast</span><span class="o">&lt;</span><span class="k">volatile</span> <span class="n">bval_type</span> <span class="o">*&gt;</span><span class="p">(</span><span class="n">port</span><span class="p">)</span> <span class="o">&amp;=</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="n">bval_type</span><span class="o">&gt;</span><span class="p">(</span><span class="o">~</span><span class="n">bval</span><span class="p">);</span>
+        <span class="c1">// Set the port pin direction to output.</span>
+        <span class="c1">// Note that the address of the port direction</span>
+        <span class="c1">// register is one less than the address</span>
+        <span class="c1">// of the port value register.</span>
+        <span class="k">const</span> <span class="n">port_type</span> <span class="n">pdir</span> <span class="o">=</span> <span class="n">port</span> <span class="o">-</span> <span class="mi">1U</span><span class="p">;</span>
+        <span class="o">*</span><span class="k">reinterpret_cast</span><span class="o">&lt;</span><span class="k">volatile</span> <span class="n">bval_type</span> <span class="o">*&gt;</span><span class="p">(</span><span class="n">pdir</span><span class="p">)</span> <span class="o">|=</span> <span class="n">bval</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kt">void</span> <span class="n">on</span><span class="p">()</span> <span class="k">const</span>
+    <span class="p">{</span>
+        <span class="o">*</span><span class="k">reinterpret_cast</span><span class="o">&lt;</span><span class="k">volatile</span> <span class="n">bval_type</span> <span class="o">*&gt;</span><span class="p">(</span><span class="n">port</span><span class="p">)</span> <span class="o">|=</span> <span class="n">bval</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kt">void</span> <span class="n">off</span><span class="p">()</span> <span class="k">const</span>
+    <span class="p">{</span>
+        <span class="o">*</span><span class="k">reinterpret_cast</span><span class="o">&lt;</span><span class="k">volatile</span> <span class="n">bval_type</span> <span class="o">*&gt;</span><span class="p">(</span><span class="n">port</span><span class="p">)</span> <span class="o">&amp;=</span> <span class="o">~</span><span class="n">bval</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kt">void</span> <span class="n">toggle</span><span class="p">()</span> <span class="k">const</span>
+    <span class="p">{</span>
+        <span class="c1">// Toggle the LED via direct memory access.</span>
+        <span class="o">*</span><span class="k">reinterpret_cast</span><span class="o">&lt;</span><span class="k">volatile</span> <span class="n">bval_type</span> <span class="o">*&gt;</span><span class="p">(</span><span class="n">port</span><span class="p">)</span> <span class="o">^=</span> <span class="n">bval</span><span class="p">;</span>
+    <span class="p">}</span>
+
+<span class="k">private</span><span class="o">:</span>
+
+    <span class="c1">// Private member variables of the class.</span>
+    <span class="k">const</span> <span class="n">port_type</span> <span class="n">port</span><span class="p">;</span>
+    <span class="k">const</span> <span class="n">bval_type</span> <span class="n">bval</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="k">namespace</span>
+<span class="p">{</span>
+    <span class="c1">// Create led_b5 on portb.5.</span>
+		<span class="p">{</span>
+      <span class="mh">0x25</span><span class="p">,</span> <span class="c1">// Address of portb.</span>
+		<span class="mh">0x20</span> <span class="c1">// Bit-value of portb.5.</span>
+		<span class="p">};</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+
+<span class="p">{</span>
+    <span class="c1">// Toggle led_b5 in a loop forever.</span>
+    <span class="k">for</span> <span class="p">(;;)</span>
+    <span class="p">{</span>
+        <span class="n">led_b5</span><span class="p">.</span><span class="n">toggle</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>اما بک برنامه نویس خوب هیج وقت از Magic Number ها در کد ها استفاده نمی‌کند پس باید برای ادرس رجیستر ها تعاریف را به صورتی بنویسیم که در زمان کامپایل ترجمه شود. در زبان C از کلید واژه define  برای این کار استفاده میکردیم . اما ++C امکان بیشتری برای ما ایجاد میکند و این بار تعاریف را به شکل زیر نوشته و کد را باز نویسی میکنیم:</p>
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">namespace</span> <span class="n">mcal</span>
+<span class="p">{</span>
+    <span class="c1">// Compile-time constant register addresses.</span>
+    <span class="k">namespace</span> <span class="n">reg</span>
+    <span class="p">{</span>
+        <span class="c1">// The address of portb.</span>
+        <span class="k">constexpr</span> <span class="n">std</span><span class="o">::</span><span class="kt">uint8_t</span> <span class="n">portb</span> <span class="o">=</span> <span class="mh">0x25U</span><span class="p">;</span>
+        <span class="c1">// The values of bit0 through bit7.</span>
+        <span class="k">constexpr</span> <span class="n">std</span><span class="o">::</span><span class="kt">uint8_t</span> <span class="n">bval0</span> <span class="o">=</span> <span class="mi">1U</span><span class="p">;</span>
+        <span class="k">constexpr</span> <span class="n">std</span><span class="o">::</span><span class="kt">uint8_t</span> <span class="n">bval1</span> <span class="o">=</span> <span class="mi">1U</span> <span class="o">&lt;&lt;</span> <span class="mi">1U</span><span class="p">;</span>
+        <span class="k">constexpr</span> <span class="n">std</span><span class="o">::</span><span class="kt">uint8_t</span> <span class="n">bval2</span> <span class="o">=</span> <span class="mi">1U</span> <span class="o">&lt;&lt;</span> <span class="mi">2U</span><span class="p">;</span>
+        <span class="k">constexpr</span> <span class="n">std</span><span class="o">::</span><span class="kt">uint8_t</span> <span class="n">bval3</span> <span class="o">=</span> <span class="mi">1U</span> <span class="o">&lt;&lt;</span> <span class="mi">3U</span><span class="p">;</span>
+        <span class="k">constexpr</span> <span class="n">std</span><span class="o">::</span><span class="kt">uint8_t</span> <span class="n">bval4</span> <span class="o">=</span> <span class="mi">1U</span> <span class="o">&lt;&lt;</span> <span class="mi">4U</span><span class="p">;</span>
+        <span class="k">constexpr</span> <span class="n">std</span><span class="o">::</span><span class="kt">uint8_t</span> <span class="n">bval5</span> <span class="o">=</span> <span class="mi">1U</span> <span class="o">&lt;&lt;</span> <span class="mi">5U</span><span class="p">;</span>
+        <span class="k">constexpr</span> <span class="n">std</span><span class="o">::</span><span class="kt">uint8_t</span> <span class="n">bval6</span> <span class="o">=</span> <span class="mi">1U</span> <span class="o">&lt;&lt;</span> <span class="mi">6U</span><span class="p">;</span>
+        <span class="k">constexpr</span> <span class="n">std</span><span class="o">::</span><span class="kt">uint8_t</span> <span class="n">bval7</span> <span class="o">=</span> <span class="mi">1U</span> <span class="o">&lt;&lt;</span> <span class="mi">7U</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>ممکن است که این کد کامل نباشد!  ممکن هست شما متد های بیشتری برای یک ال ای دی متصور بشید. پس دست به کار بشید و ادامه این کد رو خودتون دست بگیرید! :)</p>
+</blockquote>
+
+<p>در پست بعدی در مورد این صحبت میکنیم که زبان ++C چه امکاناتی به ما میدهد و در چه بخش هایی با C متفاوت است. 
+و در پست های بعدی در مورد بحث چالش بر انگیز بازدهی ++C  نسبت به C مینویسیم و تکنیک های OOP در برنامه نویسی برای میکروکنترلر ها که همواره مسئله منابع و سرعت اجرا مطرح هست.</p>
+
+<p>وقت خوش و ایام به کام :)</p>
+
+
+    </div>
+
+    <div class="post__share">
+  <div class="share__head">
+    <div class="share__title">Share this Post</div>
+  </div>
+  <ul class="share__list list-reset">
+    <li class="share__item">
+      <a class="share__link share__twitter"
+        href="https://twitter.com/intent/tweet?text=%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C%20%D8%B4%DB%8C%20%DA%AF%D8%B1%D8%A7%20%D8%A8%D8%B1%D8%A7%DB%8C%20%D9%85%DB%8C%DA%A9%D8%B1%D9%88%DA%A9%D9%86%D8%AA%D8%B1%D9%84%D8%B1%20%D9%87%D8%A7%20(%D8%A8%D8%AE%D8%B4%20%DB%8C%DA%A9%D9%85)&url=http://localhost:4000/blog/oop-onmicro-part1"
+        onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+        title="Share on Twitter" rel="nofollow"><i class="ion ion-logo-twitter"></i></a>
+    </li>
+    <li class="share__item">
+      <a class="share__link share__facebook"
+        href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/blog/oop-onmicro-part1"
+        onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+        title="Share on Facebook" rel="nofollow"><i class="ion ion-logo-facebook"></i></a>
+    </li>
+    <li class="share__item">
+      <a class="share__link share__pinterest"
+        href="http://pinterest.com/pin/create/button/?url=http://localhost:4000/blog/oop-onmicro-part1&amp;media=http://localhost:4000/images/post-2.jpg&amp;description=%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C%20%D8%B4%DB%8C%20%DA%AF%D8%B1%D8%A7%20%D8%A8%D8%B1%D8%A7%DB%8C%20%D9%85%DB%8C%DA%A9%D8%B1%D9%88%DA%A9%D9%86%D8%AA%D8%B1%D9%84%D8%B1%20%D9%87%D8%A7%20(%D8%A8%D8%AE%D8%B4%20%DB%8C%DA%A9%D9%85)"
+        onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;"
+        title="Share on Pinterest" rel="nofollow"><i class="ion ion-logo-pinterest"></i></a>
+    </li>
+    <li class="share__item">
+      <a class="share__link share__linkedin"
+        href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/blog/oop-onmicro-part1&title=%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C%20%D8%B4%DB%8C%20%DA%AF%D8%B1%D8%A7%20%D8%A8%D8%B1%D8%A7%DB%8C%20%D9%85%DB%8C%DA%A9%D8%B1%D9%88%DA%A9%D9%86%D8%AA%D8%B1%D9%84%D8%B1%20%D9%87%D8%A7%20(%D8%A8%D8%AE%D8%B4%20%DB%8C%DA%A9%D9%85)&summary=&source=Hexabits"
+        onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+        title="Share on LinkedIn" rel="nofollow"><i class="ion ion-logo-linkedin"></i></a>
+    </li>
+  </ul>
+</div>
+
+  </article>
+</div>
+<!-- end post -->
+
+<div class="container" >
+  <div class="row">
+    <div class="col col-10 col-d-12 push-d-0 push-1">
+      <div class="post__navigation animate">
+  
+  <a class="post__prev" href="/blog/it-is-never-too-late-to-be-what-you-might-have-been">
+    <div class="prev__image">
+      <img loading="lazy" src="/images/post1.png" alt="برنامه نویسی شی گرا برای میکروکنترلر ها (بخش یکم)">
+    </div>
+    <div class="prev__box">
+      <span class="post__nav post__nav__prev">Prev post</span>
+      <h2 class="post__nav__title">مارک داون چیست و چطوری باید با آن کارکرد؟</h2>
+    </div>
+  </a>
+  
+
+  
+</div>
+    </div>
+  </div>
+</div>
+<div dir="rtl">
+  
+
+
+
+
+
+<!-- begin related posts -->
+<div class="container">
+  <section class="related-posts  animate">
+    <div class="row">
+      <div class="col col-12">
+        <div class="container__inner">
+          <div class="section__info">
+            <div class="section__head">
+              <h2 class="section__title">You may also like</h2>
+              <a class="section__link" href="/blog">
+                
+                
+                  
+                    <a href="/tags#EmbeddedSoftware" class="section__link related-tag">See all<span> EmbeddedSoftware</span> <i class="ion ion-md-arrow-forward"></i></a>
+                  
+                
+                  
+                
+              
+              </a>
+            </div>
+          </div>
+          <div class="row">
+
+          
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<!-- end related posts -->
+
+</div>
+
+
+
+
+    <!--
+        Bookshop components are accessed using the bookshop tag,
+        using the same syntax as the standard Jekyll include tag.
+    -->
+        <!--bookshop-live meta(version="3.9.0" baseurl="" title="Hexabits") -->
+<!--bookshop-live name(page.jekyll.html) params(content_blocks=page.content_blocks page_theme=page.page_theme) context() -->
+
+<!--bookshop-live end-->
+    
+    <div class="top" title="Top"><i class="ion ion-ios-arrow-up"></i></div>
+    <!-- begin footer -->
+<footer class="footer">
+  <div class="container" dir="rtl">
+    <div class="row">
+      <div class="col col-12">
+
+        <!--bookshop-live meta(version="3.9.0" baseurl="" title="Hexabits") -->
+<!--bookshop-live name(social-link.jekyll.html) params() context() -->
+
+<div class="social">
+  <ul class="social__list list-reset">
+    
+    <li class="social__item">
+      <a class="social__link" href="https://www.linkedin.com/in/farzin-rb70/" target="_blank" rel="noopener" aria-label="linkedin icon"><i class="ion ion-logo-linkedin"></i></a>
+    </li>
+    
+    <li class="social__item">
+      <a class="social__link" href="https://github.com/farzin-rb70" target="_blank" rel="noopener" aria-label="github icon"><i class="ion ion-logo-github"></i></a>
+    </li>
+    
+    <li class="social__item">
+      <a class="social__link" href="https://www.instagram.com/hexabits_edu/" target="_blank" rel="noopener" aria-label="instagram icon"><i class="ion ion-logo-instagram"></i></a>
+    </li>
+    
+    <li class="social__item">
+      <a class="social__link" href="mailto:farzin.rb70@gmail.com" target="_blank" rel="noopener" aria-label="google icon"><i class="ion ion-logo-google"></i></a>
+    </li>
+    
+  </ul>
+</div>
+
+<!--bookshop-live end-->
+
+        <ul class="footer_nav list-reset">
+          
+          <li class="footer_nav__item">
+            <a href="/" class="footer_nav__link">خانه</a>
+          </li>
+          
+          <li class="footer_nav__item">
+            <a href="/courses/" class="footer_nav__link">دوره ها</a>
+          </li>
+          
+          <li class="footer_nav__item">
+            <a href="/about/" class="footer_nav__link">درباره من</a>
+          </li>
+          
+          <li class="footer_nav__item">
+            <a href="/blog/" class="footer_nav__link">وبلاگ</a>
+          </li>
+          
+        </ul>
+
+        <div class="copyright"><p> 2021 &copy; <a href="/">این سایت </a> نمونه برداری شد از کد متن باز <a href="https://cloudcannon.com/"> CloudCannon</a> است.</p></div>
+
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- end footer -->
+    <script src="/js/scripts.js"></script>
+    <script src="/js/common.js"></script>
+</body>
+
+</html>

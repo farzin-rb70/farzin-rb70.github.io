@@ -1,4 +1,16 @@
 ---
 ---
 
+.post__content {
+    direction: rtl;
+    text-align: right;
+}
+
+/* چپ‌چین کردن بلوک‌های کد */
+.post__content pre,
+.post__content code {
+    direction: ltr;
+    text-align: left;
+}
+
 {% bookshop_scss %}
