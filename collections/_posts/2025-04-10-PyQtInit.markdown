@@ -1,0 +1,92 @@
+---
+title: چگونه با PyQt یک رابط کاربری بسازیم
+date:   2024-10-22 15:01:35 +0300
+image:  '/images/Python_and_Qt.svg.png'
+tags:   [EmbeddedSoftware, RTOS]
+---
+
+# چگونه با PyQt یک رابط کاربری بسازیم.
+
+
+### نصب پایتون
+
+```bash
+sudo apt install python3
+```
+### نصب پکیج منیجر پایتون که pip نام دارد.
+```bash
+sudo apt install python3-pip
+```
+حتما پکیج منیجر خود را اپدیت کنید تا از خطاهای بی دلیل دور بمونید.
+```bash
+python -m pip install --upgrade pip
+```
+### نصب virtual environment 
+این نرم افزار در واقع یک محیط ایزوله برای شما ایجاد میکنه تا بتونید پکیج ها و ورژن های مرتبط با پروژه خودتون رو نصب کنید. و اختلالی با ورژن های گلوبال شما به وجود نیاد. از سمتی اگر نیاز داشتید که در ورژن های مختلف برنامه از کتابخانه با ورژن های متفاوت استفاده کنید با virtual environment به کمک شما میاد.
+```bash
+apt install python3-virtualenv
+```
+### تنظیمات اولیه برای ساخت یک پروژه پایه (Hello World!)
+
+یک پوشه برای پروژه خود ایجاد کرده و در داخل آن یک محیط مجازی ایجاد کنید.
+```bash
+mkdir helloWorld
+cd myProject
+virtualenv -p /usr/bin/python3.8 myenv
+```
+حالا باید این محیط مجازی ایزوله را فعال کنید
+```bash
+source myenv/bin/activate
+```
+شکل ترمینال شما مانند زیر میشود که یعنی محیط مجازی myenv فعال است.
+```bash
+(myenv) ➜  HelloWorld
+```
+پس از اون باید که ماژول ها ( کتابخانه ها) ی مد نظرتون رو نصب کنید . مثلا من به pyQt5 نیاز دارم.
+ ( کلید هایی که جلوی دستور اضافه کردیم برای این هست که ابتدا تمام لاگ های مسیر نصب رو ببینیم تا اگر اتفاقی در مسیر نصب افتاد در جریان باشیم و اینکه لایسنس رو باید مقدار دهی کنیم)
+```bash
+pip install pyqt5 --config-settings --confirm-license= --verbose
+```
+
+برای اینکه ببینیم چه ماژول هایی در venv  ما نصب هستند میتونیم از دستور زیر استفاده کنیم:
+```bash
+pip3 list --local
+```
+حال با دستور زیر یک فایل پایتون برای برنامه ایجاد میکنیم:
+```bash
+touch main.py
+```
+و با یک تکست ادیتور کد نمونه زیر رو در فایلتون میریزید.
+
+```python
+import QSize, Qt	from PyQt5.QtWidgets 
+import QApplication, QMainWindow, QPushButton
+
+class MainWindow(QMainWindow):
+  def __init__(self):
+    super().__init__()
+    self.setWindowTitle("My App")
+    button = QPushButton("Hello world")
+    self.setCentralWidget(button)
+app = QApplication(sys.argv)
+window = MainWindow()
+window.show()
+app.exec()
+```
+
+
+حالا که فایل ساخته شد به سراغ ادیتورمون بریم که vs-code هست.
+بعد از نصب visual studio code پوشه ای که در اون venv  ایجاد کردیم رو با vs-code باز میکنیم.
+روی فایل پروژه که دایل کلیک بکنید و برنامه که باز بشه خود vs-code  به شما پیشنهاد میده که افزونه پایتون رو نصب کنید - این کار رو انجام بدید و بعد میبینید که vs-code  رنگ بندی نوشته هاتون رو تغییر میده و این یعنی فایل شما شناسایی شده.
+
+حالا باید ورژن اینرپرتر پایتون رو به vs-code معرفی کنیم. 
+با نگه داشتن دکمه های shift+ctrl و زدن کلید P بالای صفحه کامند لاین vs-code باز میشه و از طریق تایپ گزینه select interpreter رو پیدا مکنید و ورژن اینترپرتر خودتون رو در اون وارد میکنید. 
+ورژن اینترپرتر رو در ترمینال وقتی در پوشته و venv  پروژتون هستید میتونید با نوشتن خط زیر به دست بیارید.
+```bash
+python --version
+```
+حالا با فشردن دکمه run در بالا سمت راست صفحه برنامه خودتون روببینید.
+
+
+
+

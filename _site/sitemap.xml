@@ -2,19 +2,19 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://localhost:4000/about/</loc>
-<lastmod>2025-01-27T04:57:15+03:30</lastmod>
+<lastmod>2025-04-10T15:32:44+03:30</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/blog/</loc>
-<lastmod>2025-01-27T04:57:15+03:30</lastmod>
+<lastmod>2025-04-10T15:32:44+03:30</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/courses/</loc>
-<lastmod>2025-01-27T04:57:15+03:30</lastmod>
+<lastmod>2025-04-10T15:32:44+03:30</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/</loc>
-<lastmod>2025-01-27T04:57:15+03:30</lastmod>
+<lastmod>2025-04-10T15:32:44+03:30</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/blog/it-is-never-too-late-to-be-what-you-might-have-been</loc>
@@ -26,6 +26,10 @@
 </url>
 <url>
 <loc>http://localhost:4000/blog/zephyr-init</loc>
+<lastmod>2024-10-22T15:31:35+03:30</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/blog/pyqtinit</loc>
 <lastmod>2024-10-22T15:31:35+03:30</lastmod>
 </url>
 <url>

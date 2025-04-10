@@ -1,5 +1,5 @@
 ---
-title: شروع کار با Zephyr RTOS
+title: راه اندازی و شروع کار با Zephyr RTOS
 date:   2024-10-22 15:01:35 +0300
 image:  '/images/zephyr-banner.jpg'
 tags:   [EmbeddedSoftware, RTOS]
@@ -45,13 +45,13 @@ tar -xf documents/v3.7.1.tar.gz -C .
 
 برای این کار باید فایل پیکربندی west.yml رو ویرایش کنید و فقط ماژول‌هایی که به اون‌ها نیاز دارید رو نگه دارید.
  
- ```bash
+```bash
 gedit zephyr-3.7.1/west.yml
 ```
  چون پردازنده انتخابی ما esp32s3 از شرکت espressif و با پردازنده xtensa است . فقط ماژول های این دو  را در فایل west.yml نگه میداریم.
  پس فایل ما به شکل زیر خواهد شد.
 
- ```yml
+```yml
 manifest:
   defaults:
     remote: upstream
@@ -82,7 +82,7 @@ manifest:
     path: zephyr
     west-commands: scripts/west-commands.yml
     import: submanifests
- ```
+```
 
 ### قدم پنجم: درخواست‌های west
 حالا که فایل پیکربندی رو تنظیم کردید، می‌رید داخل پوشه Zephyr و دستور west init رو اجرا می‌کنید. این دستور به west می‌گه که همه فایل‌های مورد نیاز رو دانلود کنه. بعد با دستور west update می‌تونید ماژول‌ها رو از گیت‌هاب کلون کنید.

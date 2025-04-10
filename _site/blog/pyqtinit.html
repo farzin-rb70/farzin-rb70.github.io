@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>چگونه با PyQt یک رابط کاربری بسازیم</title>
+  <meta name='description' content='سابت شخصی فرزین رضایی'>
+
+  <link rel="canonical" href="http://localhost:4000/blog/pyqtinit">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="چگونه با PyQt یک رابط کاربری بسازیم – Farzin.rb70">
+  <meta name="twitter:description" content="چگونه با PyQt یک رابط کاربری بسازیم.
+">
+  <meta name="twitter:image:src" content="http://localhost:4000/images/Python_and_Qt.svg.png">
+
+  <!-- Facebook OpenGraph -->
+  <meta property="og:title" content="چگونه با PyQt یک رابط کاربری بسازیم – Farzin.rb70">
+  <meta property="og:description" content="چگونه با PyQt یک رابط کاربری بسازیم.
+">
+  <meta property="og:image" content="http://localhost:4000/images/Python_and_Qt.svg.png">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+
+  <!-- Ionicons -->
+  <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/main.css">
+</head>
+
+
+<body>
+
+    
+
+    <!-- begin header -->
+<header class="c-header">
+  <div class="container" dir="rtl">
+    <div class="row">
+      <div class="c-header__inner" dir="ltr">
+
+        <div class="logo">
+          <a class="logo__link" href="/">
+          
+            <img class="logo__image" src="/images/logo1.png" alt="Farzin.rb70">
+          
+          </a>
+        </div>
+
+        <nav class="main-nav">
+          <div class="main-nav__box">
+
+            <div class="nav__icon-close">
+              <i class="ion ion-md-close"></i>
+            </div>
+
+            <div class="nav__title">Menu</div>
+
+              <ul class="nav__list list-reset">
+
+              
+                
+                <li class="nav__item">
+                  <a href="/" class="nav__link">خانه</a>
+                </li>
+                
+              
+                
+                <li class="nav__item">
+                  <a href="/courses/" class="nav__link">دوره‌ ها</a>
+                </li>
+                
+              
+                
+                <li class="nav__item">
+                  <a href="/blog/" class="nav__link">وبلاگ</a>
+                </li>
+                
+              
+                
+                <li class="nav__item">
+                  <a href="/about/" class="nav__link">درباره من</a>
+                </li>
+                
+              
+
+            </ul>
+          </div>
+
+          <!--bookshop-live meta(version="3.9.0" baseurl="" title="Hexabits") -->
+<!--bookshop-live name(social-link.jekyll.html) params() context() -->
+
+<div class="social">
+  <ul class="social__list list-reset">
+    
+    <li class="social__item">
+      <a class="social__link" href="https://www.linkedin.com/in/farzin-rb70/" target="_blank" rel="noopener" aria-label="linkedin icon"><i class="ion ion-logo-linkedin"></i></a>
+    </li>
+    
+    <li class="social__item">
+      <a class="social__link" href="https://github.com/farzin-rb70" target="_blank" rel="noopener" aria-label="github icon"><i class="ion ion-logo-github"></i></a>
+    </li>
+    
+    <li class="social__item">
+      <a class="social__link" href="https://www.instagram.com/hexabits_edu/" target="_blank" rel="noopener" aria-label="instagram icon"><i class="ion ion-logo-instagram"></i></a>
+    </li>
+    
+    <li class="social__item">
+      <a class="social__link" href="mailto:farzin.rb70@gmail.com" target="_blank" rel="noopener" aria-label="google icon"><i class="ion ion-logo-google"></i></a>
+    </li>
+    
+  </ul>
+</div>
+
+<!--bookshop-live end-->
+        </nav>
+
+        <div class="nav-button">
+          <i class="nav__icon nav__icon-menu ion ion-md-menu"></i>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</header>
+<!-- end header -->
+
+    <div class="post-top" dir="rtl">
+  <div class="container">
+    <div class="row">
+
+      
+      <div class="col col-6 col-d-12">
+        <div class="post-image">
+          <img loading="lazy" src="/images/Python_and_Qt.svg.png" alt="چگونه با PyQt یک رابط کاربری بسازیم">
+        </div>
+      </div>
+      
+
+      <div class="col col-6 col-d-12">
+        <div class="post__info">
+
+          
+          <div class="post-tags">
+            
+              <a href="/tag/embeddedsoftware" class="post-tags__tag">EmbeddedSoftware</a>
+            
+              <a href="/tag/rtos" class="post-tags__tag">RTOS</a>
+            
+          </div>
+          
+
+
+          <h1 class="post__title">چگونه با PyQt یک رابط کاربری بسازیم</h1>
+
+          <div class="post__meta">
+            <div class="post__author-image">
+              <img loading="lazy" src="/images/avatarFarzin.jpg" alt="فرزین رضایی">
+            </div>
+
+            <div class="post__meta-bottom">
+              <div class="post__author">فرزین رضایی</div>
+              <time class="post__date" datetime="2024-10-22T15:31:35+03:30">22 Oct 2024</time>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- begin post -->
+<div class="container animate">
+
+  <article class="post">
+
+    <div class="post__content" >
+      <h1 id="چگونه-با-pyqt-یک-رابط-کاربری-بسازیم">چگونه با PyQt یک رابط کاربری بسازیم.</h1>
+
+<h3 id="نصب-پایتون">نصب پایتون</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install </span>python3
+</code></pre></div></div>
+<h3 id="نصب-پکیج-منیجر-پایتون-که-pip-نام-دارد">نصب پکیج منیجر پایتون که pip نام دارد.</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install </span>python3-pip
+</code></pre></div></div>
+<p>حتما پکیج منیجر خود را اپدیت کنید تا از خطاهای بی دلیل دور بمونید.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python <span class="nt">-m</span> pip <span class="nb">install</span> <span class="nt">--upgrade</span> pip
+</code></pre></div></div>
+<h3 id="نصب-virtual-environment">نصب virtual environment</h3>
+<p>این نرم افزار در واقع یک محیط ایزوله برای شما ایجاد میکنه تا بتونید پکیج ها و ورژن های مرتبط با پروژه خودتون رو نصب کنید. و اختلالی با ورژن های گلوبال شما به وجود نیاد. از سمتی اگر نیاز داشتید که در ورژن های مختلف برنامه از کتابخانه با ورژن های متفاوت استفاده کنید با virtual environment به کمک شما میاد.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apt <span class="nb">install </span>python3-virtualenv
+</code></pre></div></div>
+<h3 id="تنظیمات-اولیه-برای-ساخت-یک-پروژه-پایه-hello-world">تنظیمات اولیه برای ساخت یک پروژه پایه (Hello World!)</h3>
+
+<p>یک پوشه برای پروژه خود ایجاد کرده و در داخل آن یک محیط مجازی ایجاد کنید.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir </span>helloWorld
+<span class="nb">cd </span>myProject
+virtualenv <span class="nt">-p</span> /usr/bin/python3.8 myenv
+</code></pre></div></div>
+<p>حالا باید این محیط مجازی ایزوله را فعال کنید</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">source </span>myenv/bin/activate
+</code></pre></div></div>
+<p>شکل ترمینال شما مانند زیر میشود که یعنی محیط مجازی myenv فعال است.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">(</span>myenv<span class="o">)</span> ➜  HelloWorld
+</code></pre></div></div>
+<p>پس از اون باید که ماژول ها ( کتابخانه ها) ی مد نظرتون رو نصب کنید . مثلا من به pyQt5 نیاز دارم.
+ ( کلید هایی که جلوی دستور اضافه کردیم برای این هست که ابتدا تمام لاگ های مسیر نصب رو ببینیم تا اگر اتفاقی در مسیر نصب افتاد در جریان باشیم و اینکه لایسنس رو باید مقدار دهی کنیم)</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip <span class="nb">install </span>pyqt5 <span class="nt">--config-settings</span> <span class="nt">--confirm-license</span><span class="o">=</span> <span class="nt">--verbose</span>
+</code></pre></div></div>
+
+<p>برای اینکه ببینیم چه ماژول هایی در venv  ما نصب هستند میتونیم از دستور زیر استفاده کنیم:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip3 list <span class="nt">--local</span>
+</code></pre></div></div>
+<p>حال با دستور زیر یک فایل پایتون برای برنامه ایجاد میکنیم:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">touch </span>main.py
+</code></pre></div></div>
+<p>و با یک تکست ادیتور کد نمونه زیر رو در فایلتون میریزید.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">QSize</span><span class="p">,</span> <span class="n">Qt</span>	<span class="kn">from</span> <span class="n">PyQt5.QtWidgets</span> 
+<span class="kn">import</span> <span class="n">QApplication</span><span class="p">,</span> <span class="n">QMainWindow</span><span class="p">,</span> <span class="n">QPushButton</span>
+
+<span class="k">class</span> <span class="nc">MainWindow</span><span class="p">(</span><span class="n">QMainWindow</span><span class="p">):</span>
+  <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+    <span class="nf">super</span><span class="p">().</span><span class="nf">__init__</span><span class="p">()</span>
+    <span class="n">self</span><span class="p">.</span><span class="nf">setWindowTitle</span><span class="p">(</span><span class="sh">"</span><span class="s">My App</span><span class="sh">"</span><span class="p">)</span>
+    <span class="n">button</span> <span class="o">=</span> <span class="nc">QPushButton</span><span class="p">(</span><span class="sh">"</span><span class="s">Hello world</span><span class="sh">"</span><span class="p">)</span>
+    <span class="n">self</span><span class="p">.</span><span class="nf">setCentralWidget</span><span class="p">(</span><span class="n">button</span><span class="p">)</span>
+<span class="n">app</span> <span class="o">=</span> <span class="nc">QApplication</span><span class="p">(</span><span class="n">sys</span><span class="p">.</span><span class="n">argv</span><span class="p">)</span>
+<span class="n">window</span> <span class="o">=</span> <span class="nc">MainWindow</span><span class="p">()</span>
+<span class="n">window</span><span class="p">.</span><span class="nf">show</span><span class="p">()</span>
+<span class="n">app</span><span class="p">.</span><span class="nf">exec</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>حالا که فایل ساخته شد به سراغ ادیتورمون بریم که vs-code هست.
+بعد از نصب visual studio code پوشه ای که در اون venv  ایجاد کردیم رو با vs-code باز میکنیم.
+روی فایل پروژه که دایل کلیک بکنید و برنامه که باز بشه خود vs-code  به شما پیشنهاد میده که افزونه پایتون رو نصب کنید - این کار رو انجام بدید و بعد میبینید که vs-code  رنگ بندی نوشته هاتون رو تغییر میده و این یعنی فایل شما شناسایی شده.</p>
+
+<p>حالا باید ورژن اینرپرتر پایتون رو به vs-code معرفی کنیم. 
+با نگه داشتن دکمه های shift+ctrl و زدن کلید P بالای صفحه کامند لاین vs-code باز میشه و از طریق تایپ گزینه select interpreter رو پیدا مکنید و ورژن اینترپرتر خودتون رو در اون وارد میکنید. 
+ورژن اینترپرتر رو در ترمینال وقتی در پوشته و venv  پروژتون هستید میتونید با نوشتن خط زیر به دست بیارید.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python <span class="nt">--version</span>
+</code></pre></div></div>
+<p>حالا با فشردن دکمه run در بالا سمت راست صفحه برنامه خودتون روببینید.</p>
+
+
+    </div>
+
+    <div class="post__share">
+  <div class="share__head">
+    <div class="share__title">Share this Post</div>
+  </div>
+  <ul class="share__list list-reset">
+    <li class="share__item">
+      <a class="share__link share__twitter"
+        href="https://twitter.com/intent/tweet?text=%DA%86%DA%AF%D9%88%D9%86%D9%87%20%D8%A8%D8%A7%20PyQt%20%DB%8C%DA%A9%20%D8%B1%D8%A7%D8%A8%D8%B7%20%DA%A9%D8%A7%D8%B1%D8%A8%D8%B1%DB%8C%20%D8%A8%D8%B3%D8%A7%D8%B2%DB%8C%D9%85&url=http://localhost:4000/blog/pyqtinit"
+        onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+        title="Share on Twitter" rel="nofollow"><i class="ion ion-logo-twitter"></i></a>
+    </li>
+    <li class="share__item">
+      <a class="share__link share__facebook"
+        href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/blog/pyqtinit"
+        onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+        title="Share on Facebook" rel="nofollow"><i class="ion ion-logo-facebook"></i></a>
+    </li>
+    <li class="share__item">
+      <a class="share__link share__pinterest"
+        href="http://pinterest.com/pin/create/button/?url=http://localhost:4000/blog/pyqtinit&amp;media=http://localhost:4000/images/Python_and_Qt.svg.png&amp;description=%DA%86%DA%AF%D9%88%D9%86%D9%87%20%D8%A8%D8%A7%20PyQt%20%DB%8C%DA%A9%20%D8%B1%D8%A7%D8%A8%D8%B7%20%DA%A9%D8%A7%D8%B1%D8%A8%D8%B1%DB%8C%20%D8%A8%D8%B3%D8%A7%D8%B2%DB%8C%D9%85"
+        onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;"
+        title="Share on Pinterest" rel="nofollow"><i class="ion ion-logo-pinterest"></i></a>
+    </li>
+    <li class="share__item">
+      <a class="share__link share__linkedin"
+        href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/blog/pyqtinit&title=%DA%86%DA%AF%D9%88%D9%86%D9%87%20%D8%A8%D8%A7%20PyQt%20%DB%8C%DA%A9%20%D8%B1%D8%A7%D8%A8%D8%B7%20%DA%A9%D8%A7%D8%B1%D8%A8%D8%B1%DB%8C%20%D8%A8%D8%B3%D8%A7%D8%B2%DB%8C%D9%85&summary=&source=Hexabits"
+        onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+        title="Share on LinkedIn" rel="nofollow"><i class="ion ion-logo-linkedin"></i></a>
+    </li>
+  </ul>
+</div>
+
+  </article>
+</div>
+<!-- end post -->
+
+<div class="container" >
+  <div class="row">
+    <div class="col col-10 col-d-12 push-d-0 push-1">
+      <div class="post__navigation animate">
+  
+  <a class="post__prev" href="/blog/zephyr-init">
+    <div class="prev__image">
+      <img loading="lazy" src="/images/zephyr-banner.jpg" alt="چگونه با PyQt یک رابط کاربری بسازیم">
+    </div>
+    <div class="prev__box">
+      <span class="post__nav post__nav__prev">Prev post</span>
+      <h2 class="post__nav__title">راه اندازی و شروع کار با Zephyr RTOS</h2>
+    </div>
+  </a>
+  
+
+  
+</div>
+    </div>
+  </div>
+</div>
+<div dir="rtl">
+  
+
+
+
+
+
+<!-- begin related posts -->
+<div class="container">
+  <section class="related-posts is-related animate">
+    <div class="row">
+      <div class="col col-12">
+        <div class="container__inner">
+          <div class="section__info">
+            <div class="section__head">
+              <h2 class="section__title">You may also like</h2>
+              <a class="section__link" href="/blog">
+                
+                
+                  
+                    <a href="/tags#EmbeddedSoftware" class="section__link related-tag">See all<span> EmbeddedSoftware</span> <i class="ion ion-md-arrow-forward"></i></a>
+                  
+                
+                  
+                
+              
+              </a>
+            </div>
+          </div>
+          <div class="row">
+
+          
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+
+              <div class="article col col-4 col-d-6 col-t-12">
+                <div class="article__inner">
+              
+                  
+                  <div class="image-wrap">
+                    <a class="article__image" href="/blog/zephyr-init">
+                      <img loading="lazy" src="/images/zephyr-banner.jpg" alt="راه اندازی و شروع کار با Zephyr RTOS">
+                    </a>
+                  </div>
+                  
+              
+                  <div class="article__content">
+              
+                    
+                    <div class="article-tags__box">
+                      
+                      <a href="/tag/embeddedsoftware" class="article__tag">EmbeddedSoftware</a>
+                      
+                      <a href="/tag/rtos" class="article__tag">RTOS</a>
+                      
+                    </div>
+                    
+              
+                    <h2 class="article__title">
+                      <a href="/blog/zephyr-init">راه اندازی و شروع کار با Zephyr RTOS</a>
+                    </h2>
+              
+                    <p class="article__excerpt">
+                      سیستم عامل Zephyr برای میکروکنترلر ها:
+
+سیستم عامل Zephyr RTOS یک سیستم‌عامل متن‌باز برای میکروکنترلرها و دستگاه‌های ...
+                    </p>
+              
+                    <div class="article__meta">
+                      <div class="article__author-image">
+                        <img loading="lazy" src="/images/avatarFarzin.jpg" alt="فرزین رضایی">
+                      </div>
+                      <div class="article-info">
+                        <div class="article__author-name">فرزین رضایی</div>
+                        <span class="article__date"><time datetime="2024-10-22T15:31:35+03:30">22 Oct 2024</time></span>
+                      </div>
+                    </div>
+              
+                  </div>
+                </div>
+              </div>
+
+            
+                
+              
+            
+            
+            
+      
+            
+      
+            
+
+              <div class="article col col-4 col-d-6 col-t-12">
+                <div class="article__inner">
+              
+                  
+                  <div class="image-wrap">
+                    <a class="article__image" href="/blog/oop-onmicro-part1">
+                      <img loading="lazy" src="/images/post-2.jpg" alt="برنامه نویسی شی گرا برای میکروکنترلر ها (بخش یکم)">
+                    </a>
+                  </div>
+                  
+              
+                  <div class="article__content">
+              
+                    
+                    <div class="article-tags__box">
+                      
+                      <a href="/tag/embeddedsoftware" class="article__tag">EmbeddedSoftware</a>
+                      
+                      <a href="/tag/cpp" class="article__tag">cpp</a>
+                      
+                    </div>
+                    
+              
+                    <h2 class="article__title">
+                      <a href="/blog/oop-onmicro-part1">برنامه نویسی شی گرا برای میکروکنترلر ها (بخش یکم)</a>
+                    </h2>
+              
+                    <p class="article__excerpt">
+                      چگونه با ++C برای سیستم های امبدد کد نویسی کنیم؟
+
+مرحله اول : چراغ چشمک زن
+
+
+  همیشه برای شروع یک پروژه الکترونیکی پا...
+                    </p>
+              
+                    <div class="article__meta">
+                      <div class="article__author-image">
+                        <img loading="lazy" src="/images/avatarFarzin.jpg" alt="فرزین رضایی">
+                      </div>
+                      <div class="article-info">
+                        <div class="article__author-name">فرزین رضایی</div>
+                        <span class="article__date"><time datetime="2024-10-22T15:31:35+03:30">22 Oct 2024</time></span>
+                      </div>
+                    </div>
+              
+                  </div>
+                </div>
+              </div>
+
+            
+                
+              
+            
+            
+            
+      
+            
+      
+            
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<!-- end related posts -->
+
+</div>
+
+
+
+
+    <!--
+        Bookshop components are accessed using the bookshop tag,
+        using the same syntax as the standard Jekyll include tag.
+    -->
+        <!--bookshop-live meta(version="3.9.0" baseurl="" title="Hexabits") -->
+<!--bookshop-live name(page.jekyll.html) params(content_blocks=page.content_blocks page_theme=page.page_theme) context() -->
+
+<!--bookshop-live end-->
+    
+    <div class="top" title="Top"><i class="ion ion-ios-arrow-up"></i></div>
+    <!-- begin footer -->
+<footer class="footer">
+  <div class="container" dir="rtl">
+    <div class="row">
+      <div class="col col-12">
+
+        <!--bookshop-live meta(version="3.9.0" baseurl="" title="Hexabits") -->
+<!--bookshop-live name(social-link.jekyll.html) params() context() -->
+
+<div class="social">
+  <ul class="social__list list-reset">
+    
+    <li class="social__item">
+      <a class="social__link" href="https://www.linkedin.com/in/farzin-rb70/" target="_blank" rel="noopener" aria-label="linkedin icon"><i class="ion ion-logo-linkedin"></i></a>
+    </li>
+    
+    <li class="social__item">
+      <a class="social__link" href="https://github.com/farzin-rb70" target="_blank" rel="noopener" aria-label="github icon"><i class="ion ion-logo-github"></i></a>
+    </li>
+    
+    <li class="social__item">
+      <a class="social__link" href="https://www.instagram.com/hexabits_edu/" target="_blank" rel="noopener" aria-label="instagram icon"><i class="ion ion-logo-instagram"></i></a>
+    </li>
+    
+    <li class="social__item">
+      <a class="social__link" href="mailto:farzin.rb70@gmail.com" target="_blank" rel="noopener" aria-label="google icon"><i class="ion ion-logo-google"></i></a>
+    </li>
+    
+  </ul>
+</div>
+
+<!--bookshop-live end-->
+
+        <ul class="footer_nav list-reset">
+          
+          <li class="footer_nav__item">
+            <a href="/" class="footer_nav__link">خانه</a>
+          </li>
+          
+          <li class="footer_nav__item">
+            <a href="/courses/" class="footer_nav__link">دوره ها</a>
+          </li>
+          
+          <li class="footer_nav__item">
+            <a href="/about/" class="footer_nav__link">درباره من</a>
+          </li>
+          
+          <li class="footer_nav__item">
+            <a href="/blog/" class="footer_nav__link">وبلاگ</a>
+          </li>
+          
+        </ul>
+
+        <div class="copyright"><p> 2021 &copy; <a href="/">این سایت </a> نمونه برداری شد از کد متن باز <a href="https://cloudcannon.com/"> CloudCannon</a> است.</p></div>
+
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- end footer -->
+    <script src="/js/scripts.js"></script>
+    <script src="/js/common.js"></script>
+</body>
+
+</html>
