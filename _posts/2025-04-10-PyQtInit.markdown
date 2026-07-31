@@ -1,7 +1,7 @@
 ---
 title: چگونه با PyQt یک رابط کاربری بسازیم
 date:   2024-10-22 15:01:35 +0300
-image:  '/images/Python_and_Qt.svg.png'
+image:  '/assets/img/post/Python_and_Qt.svg.png'
 tags:   [EmbeddedSoftware, RTOS]
 ---
 

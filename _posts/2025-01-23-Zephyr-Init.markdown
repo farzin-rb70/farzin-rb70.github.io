@@ -1,7 +1,7 @@
 ---
 title: راه اندازی و شروع کار با Zephyr RTOS
 date:   2024-10-22 15:01:35 +0300
-image:  '/images/zephyr-banner.jpg'
+image:  '/assets/img/post/zephyr-banner.jpg'
 tags:   [EmbeddedSoftware, RTOS]
 ---
 

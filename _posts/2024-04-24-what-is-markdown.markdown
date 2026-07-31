@@ -1,7 +1,7 @@
 ---
 title: مارک داون چیست و چطوری باید با آن کارکرد؟
-date:   2018-04-24 15:01:35 +0300
-image:  '/images/post1.png'
+date:   2024-04-24 15:01:35 +0300
+image:  '/assets/img/post/post1.png'
 tags:   [Web, Markdown]
 ---
 آموزش کار با Markdown
